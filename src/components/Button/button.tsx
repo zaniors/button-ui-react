@@ -1,8 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-const tuple = <T extends string[]>(...arg: T) => arg;
-const ButtonTypes = tuple('primary', 'default', 'danger', 'link');
 export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
 export type ButtonSize = 'large' | 'middle' | 'small';
 
@@ -15,7 +13,12 @@ interface IBaseButtonProps {
   children?: React.ReactNode;
 }
 
-const Button: FC<IBaseButtonProps> = (props) => {
+type INativeButtonProps = ButtonHTMLAttributes<HTMLElement>;
+type INativeAnchorProps = AnchorHTMLAttributes<HTMLElement>;
+
+type ButtonProps = Omit<INativeButtonProps, 'type'> & INativeAnchorProps & IBaseButtonProps;
+
+const Button: FC<ButtonProps> = (props) => {
   const {
     size,
     type,
@@ -30,13 +33,14 @@ const Button: FC<IBaseButtonProps> = (props) => {
   const classes = classNames(prefixCls, {
     [`g-btn-${size}`]: size,
     [`g-btn-${type}`]: type,
-    disabled: href && disabled,
+    disabled: href && type === 'link' && disabled,
   }, className)
 
   return (
-    type === 'link' ?
+    href && type === 'link' ?
       <a className={classes} href={href} {...rest}>{children}</a>
-      : <button disabled={disabled} className={classes} {...rest}>{children}</button>
+      :
+      <button disabled={disabled} className={classes} {...rest}>{children}</button>
   )
 }
 
