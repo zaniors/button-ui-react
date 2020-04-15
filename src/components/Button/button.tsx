@@ -2,7 +2,7 @@ import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
 import classNames from 'classnames';
 
 export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
-export type ButtonSize = 'large' | 'middle' | 'small';
+export type ButtonSize = 'lg' | 'md' | 'sm';
 
 interface IBaseButtonProps {
   size?: ButtonSize;
@@ -43,5 +43,12 @@ const Button: FC<ButtonProps> = (props) => {
       <button disabled={disabled} className={classes} {...rest}>{children}</button>
   )
 }
+
+Button.defaultProps = {
+  disabled: false,
+  size: 'md',
+  type: 'default'
+}
+
 
 export default Button
