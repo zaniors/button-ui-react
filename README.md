@@ -2,6 +2,7 @@
 develop a ui component for react
 
 # file structure
+```
 UIReact/
 	README.md
 	node_modules/
@@ -23,4 +24,4 @@ UIReact/
     App.tsx
     index.tsx
     ...
-	
+	```
