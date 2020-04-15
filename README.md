@@ -22,7 +22,7 @@ UIReact/
     scss/
       _mixin.scss
       ...
-    index.scss
+      index.scss
     App.tsx
     index.tsx
     ...
