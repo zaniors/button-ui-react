@@ -16,7 +16,7 @@ interface IBaseButtonProps {
 type INativeButtonProps = ButtonHTMLAttributes<HTMLElement>;
 type INativeAnchorProps = AnchorHTMLAttributes<HTMLElement>;
 
-type ButtonProps = Omit<INativeButtonProps, 'type'> & INativeAnchorProps & IBaseButtonProps;
+export type ButtonProps = Omit<INativeButtonProps, 'type'> & INativeAnchorProps & IBaseButtonProps;
 
 const Button: FC<ButtonProps> = (props) => {
   const {
