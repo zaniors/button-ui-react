@@ -7,7 +7,12 @@ export default {
   component: Button,
 }
 
-export const DefaultButton = () => <Button onClick={action('clicked')}>默认按钮</Button>
+export const DefaultButton = () => (
+  <div>
+    <Button onClick={action('clicked')}>默认按钮</Button>
+    <Button disabled onClick={action('clicked')}>禁用按钮</Button>
+  </div>
+)
 DefaultButton.story = {
   name: '默认按钮',
   parameters: {
@@ -41,6 +46,7 @@ export const ButtonWithType = () => (
     <Button type="primary">主要按钮</Button>
     <Button type="danger">危险按钮</Button>
     <Button type="link" href="https://compelcode.com/post/how-to-develop-a-react-component-4" target="_blank">Link按钮</Button>
+    <Button disabled type="link" href="https://compelcode.com/post/how-to-develop-a-react-component-4" target="_blank">Link禁用按钮</Button>
   </div>
 )
 ButtonWithType.story = {
