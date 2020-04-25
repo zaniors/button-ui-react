@@ -5,7 +5,7 @@ import '../src/scss/index.scss';
 import './fix-storybook-table.scss';
 
 const wrapperStyle: React.CSSProperties = {
-  padding: '20px 40px'
+  padding: '20px 40px 0'
 }
 
 const WrapperStyleDecorator = (storyFn) => <div style={wrapperStyle}>{storyFn()}</div>

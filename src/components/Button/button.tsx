@@ -5,6 +5,7 @@ export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
 export type ButtonSize = 'lg' | 'md' | 'sm';
 
 interface IBaseButtonProps {
+  /** 设置按钮大小 */
   size?: ButtonSize;
   type?: ButtonType;
   disabled?: boolean;
@@ -18,7 +19,7 @@ type INativeAnchorProps = AnchorHTMLAttributes<HTMLElement>;
 
 export type ButtonProps = Omit<INativeButtonProps, 'type'> & INativeAnchorProps & IBaseButtonProps;
 
-const Button: FC<ButtonProps> = (props) => {
+export const Button: FC<ButtonProps> = (props) => {
   const {
     size,
     type,
@@ -51,4 +52,4 @@ Button.defaultProps = {
 }
 
 
-export default Button
+export default Button;

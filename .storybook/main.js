@@ -5,4 +5,11 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-links',
   ],
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      use: ['react-docgen-typescript-loader'],
+    });
+    return config;
+  },
 };
