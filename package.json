@@ -43,9 +43,11 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
-    "@storybook/react": "^5.3.18"
+    "@storybook/react": "^5.3.18",
+    "@types/storybook__addon-info": "^5.2.1"
   }
 }
