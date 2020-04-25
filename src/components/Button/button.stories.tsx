@@ -18,11 +18,11 @@ DefaultButton.story = {
 }
 
 export const ButtonWithSize = () => (
-  <>
+  <div>
     <Button size="sm">小号按钮</Button>
     <Button size="md">中号按钮</Button>
     <Button size="lg">大号按钮</Button>
-  </>
+  </div>
 )
 ButtonWithSize.story = {
   name: '按钮尺寸',
@@ -37,11 +37,11 @@ ButtonWithSize.story = {
 }
 
 export const ButtonWithType = () => (
-  <>
+  <div>
     <Button type="primary">主要按钮</Button>
     <Button type="danger">危险按钮</Button>
     <Button type="link" href="https://compelcode.com/post/how-to-develop-a-react-component-4" target="_blank">Link按钮</Button>
-  </>
+  </div>
 )
 ButtonWithType.story = {
   name: '按钮类型',
