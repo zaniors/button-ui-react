@@ -8,8 +8,22 @@ module.exports = {
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
-      use: ['react-docgen-typescript-loader'],
+      use: [
+        {
+          loader: require.resolve('react-docgen-typescript-loader'),
+          options: {
+            propFilter: (prop) => {
+              if (prop.parent) {
+                return !prop.parent.fileName.includes('node_modules')
+              }
+              return true
+            }
+          }
+        }
+      ],
     });
-    return config;
+
+    config.resolve.extensions.push('.ts', '.tsx')
+    return config
   },
 };
