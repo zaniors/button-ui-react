@@ -5,10 +5,13 @@ export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
 export type ButtonSize = 'lg' | 'md' | 'sm';
 
 interface IBaseButtonProps {
-  /** 设置按钮大小 */
+  /** 按钮的大小 */
   size?: ButtonSize;
+  /** 按钮的类型 */
   type?: ButtonType;
+  /** 按钮是否禁用 */
   disabled?: boolean;
+  /** 同A标签的原生属性  */
   href?: string;
   className?: string;
   children?: React.ReactNode;
@@ -19,6 +22,13 @@ type INativeAnchorProps = AnchorHTMLAttributes<HTMLElement>;
 
 export type ButtonProps = Omit<INativeButtonProps, 'type'> & INativeAnchorProps & IBaseButtonProps;
 
+/**
+ * 页面中最常用的的按钮元素，适合于完成特定的交互
+ * ### 引用方法
+ * ~~~js
+ * import { Button } from 'bui-react'
+ * ~~~
+ */
 export const Button: FC<ButtonProps> = (props) => {
   const {
     size,
