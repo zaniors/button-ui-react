@@ -11,7 +11,7 @@ npm install bui-react
 yarn add bui-react
 ```
 
-## 🔨 Usage
+## 🔨 如何使用
 
 ```ts
 import { Button } from 'bui-react';
@@ -27,7 +27,7 @@ const App = () => (
 import 'bui-react/dist/index.css';
 ```
 
-## 📃file structure
+## 📃 文件结构
 
 ```
 bui-eact/
@@ -50,7 +50,5 @@ bui-eact/
       _mixin.scss
       ...
       index.scss
-    App.tsx
-    index.tsx
     ...
 ```
