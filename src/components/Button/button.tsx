@@ -20,7 +20,7 @@ interface IBaseButtonProps {
 type INativeButtonProps = ButtonHTMLAttributes<HTMLElement>;
 type INativeAnchorProps = AnchorHTMLAttributes<HTMLElement>;
 
-export type ButtonProps = IBaseButtonProps & Omit<INativeButtonProps | INativeAnchorProps, 'type'>;
+export type ButtonProps = IBaseButtonProps & Omit<INativeButtonProps & INativeAnchorProps, 'type'>;
 
 /**
  * 页面中最常用的的按钮元素，适合于完成特定的交互
