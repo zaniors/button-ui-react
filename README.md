@@ -1,9 +1,34 @@
-# UIReact
-develop a ui component for react
+# bui-react
+基于React的Button组件，包含了Hooks、单元测试、文档生成、NPM发布以及Travis CI等全流程学习DEMO
 
-# file structure
+## 📦 如何安装
+
+```bash
+npm install bui-react
 ```
-UIReact/
+
+```bash
+yarn add bui-react
+```
+
+## 🔨 Usage
+
+```ts
+import { Button } from 'bui-react';
+
+const App = () => (
+    <Button>默认按钮</Button>
+);
+```
+
+添加组件样式:
+
+```ts
+import 'bui-react/dist/index.css';
+
+## file structure
+```
+bui-eact/
   README.md
   node_modules/
   tsconfig.json
