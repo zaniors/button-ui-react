@@ -4,13 +4,16 @@
     "module": "esnext",
     "target": "es5",
     "declaration": true,
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
+  "include": [ 
     "src"
   ],
   "exclude": [
     "src/**/*.stories.tsx",
-    "src/**/*.text.tsx"
+    "src/**/*.test.tsx",
+    "src/setupTests.ts"
   ]
 }
