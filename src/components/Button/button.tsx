@@ -26,7 +26,7 @@ export type ButtonProps = IBaseButtonProps & Omit<INativeButtonProps & INativeAn
  * 页面中最常用的的按钮元素，适合于完成特定的交互
  * ### 引用方法
  * ~~~js
- * import { Button } from 'bui-react'
+ * import { Button } from 'button-ui-react'
  * ~~~
  */
 export const Button: FC<ButtonProps> = (props) => {
