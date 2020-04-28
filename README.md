@@ -25,9 +25,10 @@ const App = () => (
 
 ```ts
 import 'bui-react/dist/index.css';
+```
 
 ## file structure
-```
+
 bui-eact/
   README.md
   node_modules/
