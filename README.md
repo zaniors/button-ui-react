@@ -27,8 +27,9 @@ const App = () => (
 import 'bui-react/dist/index.css';
 ```
 
-## file structure
+## 📃file structure
 
+```
 bui-eact/
   README.md
   node_modules/
