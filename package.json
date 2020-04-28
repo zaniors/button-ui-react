@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "description": "基于React的Button组件，包含了Hooks、单元测试、文档生成、NPM发布以及Travis CI等全流程学习DEMO",
   "author": "zhangxu",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "dist/index.d.ts",
+  "license": "MIT",
+  "homepage": "https://github.com/ZAnsder/bui-react",
   "repository": {
     "type": "git",
     "url": "https://github.com/ZAnsder/bui-react.git"
@@ -14,10 +20,6 @@
     "ui-component",
     "button-component"
   ],
-  "private": true,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "type": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
     "start": "react-scripts start",
