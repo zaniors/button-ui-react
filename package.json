@@ -1,23 +1,23 @@
 {
-  "name": "ui-react",
+  "name": "bui-react",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/classnames": "^2.2.10",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "classnames": "^2.2.6",
-    "node-sass": "^4.13.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+  "description": "基于React的Button组件，包含了Hooks、单元测试、文档生成、NPM发布以及Travis CI等全流程学习DEMO",
+  "author": "zhangxu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZAnsder/bui-react.git"
   },
+  "keywords": [
+    "react",
+    "component",
+    "react-component",
+    "ui-component",
+    "button-component"
+  ],
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
     "start": "react-scripts start",
@@ -43,6 +43,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "typescript": "~3.7.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
